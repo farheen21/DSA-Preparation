@@ -10,10 +10,6 @@ var searchInsert = function(nums, target) {
     
     while(left <= right) {
         let mid = Math.floor((left + right)/2 );
-        // if(target < nums[left])
-        //     return left;
-        // if(target > nums[right])
-        //     return right;
         if(target === nums[mid])
             return mid;
         if(target < nums[mid])
