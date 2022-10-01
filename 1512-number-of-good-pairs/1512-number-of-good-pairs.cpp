@@ -12,23 +12,12 @@ public:
     //     return ans;
     // }
         
-        unordered_map<int,int> umap; //Initializing a Hash Table
-         
-        for(int i=0;i<nums.size();i++) //Iterating through the vector
-        {
-            ++umap[nums[i]];  //Counting the occurences of a number and storing it in value.
-            
+       int res = 0;
+        unordered_map<int, int> count;
+        for (int a: nums) {
+            res += count[a]++;
         }
-        int good_pairs = 0;
-        for(auto i:umap) //Using the formula 
-        {
-            int n = i.second; //i.second implies -- value of hash table
-            good_pairs += ((n)*(n-1))/2;
-            
-        }
-        return good_pairs;
-        
-        
-    }
-        
+        return res;
+    }     
 };
+    
