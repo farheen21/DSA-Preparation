@@ -9,17 +9,23 @@ public:
         
 //         return false;
         
-        sort(s.begin(), s.end());
-        sort(t.begin(),t.end());
+//         sort(s.begin(), s.end());
+//         sort(t.begin(),t.end());
         
         
-        if(s.size()!=t.size()) return false;
+//         if(s.size()!=t.size()) return false;
      
-        for(int i=0; i<s.size();i++){
-            if(s[i]!=t[i]){
-                return false;
-            }
-        }
-        return true;
+//         for(int i=0; i<s.size();i++){
+//             if(s[i]!=t[i]){
+//                 return false;
+//             }
+//         }
+//         return true;
+        
+        if (s.size() != t.size())
+            return false;
+        sort(s.begin(), s.end());
+        sort(t.begin(), t.end());
+        return (s == t);
     }
 };
