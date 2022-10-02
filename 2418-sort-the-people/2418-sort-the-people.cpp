@@ -14,13 +14,12 @@ public:
         
         vector<string> res;
         vector<pair<int , string>> mix;
-        for(int i = 0 ; i < heights.size() ; i++) {
-            mix.push_back({heights[i] , names[i]});
+        for(int i = 0 ; i < names.size() ; i++) 
+           mix.push_back({heights[i], names[i]});
+           sort(mix.rbegin() , mix.rend());
+        for( auto it:mix) {
+            res.push_back(it.second);
         }
-        sort(mix.rbegin() , mix.rend());
-        for(auto name:mix) 
-        res.push_back(name.second);
-        return res;
-            
+          return res;  
     }
 };
