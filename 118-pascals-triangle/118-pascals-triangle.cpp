@@ -14,7 +14,7 @@ public:
                 pascal[i].push_back(pascal[i-1][j-1]+pascal[i-1][j]);
             }
             pascal[i].push_back(1);
-            pascal[i].resize(i+1);
+            // pascal[i].resize(i+1);
         }
         return pascal; 
     }
